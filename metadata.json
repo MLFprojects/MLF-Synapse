@@ -1,0 +1,6 @@
+{
+  "name": "MLF SynapseAI - Client AI Universale",
+  "description": "Client desktop universale per AI locale e cloud con motore Ultra-Memory a comprensione attiva e mappa neurale della conoscenza.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --accent: #51a4a2;
+    --accent-glow: rgba(81, 164, 162, 0.35);
+    --bg-dark: #080c0c;
+    --bg-surface: #0e1515;
+    --bg-surface-elevated: #121a1a;
+  }
+
+  body {
+    font-family: 'Hubot Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-stretch: 100%;
+    font-variation-settings: 'wdth' 100;
+    line-height: 1.6;
+    background-color: #070b0b;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(81, 164, 162, 0.12) 0%, transparent 60%),
+      radial-gradient(circle at 100% 60%, rgba(81, 164, 162, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 0% 80%, rgba(81, 164, 162, 0.04) 0%, transparent 50%),
+      linear-gradient(180deg, #090e0e 0%, #060909 100%);
+    background-attachment: fixed;
+    color: #d6e3e2;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Hubot Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-stretch: 80%;
+    font-variation-settings: 'wdth' 80;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Neumorphic Styling for Dark Aesthetic */
+.neu-flat {
+  background: linear-gradient(145deg, #101818, #0c1212);
+  box-shadow: 
+    8px 8px 24px rgba(0, 0, 0, 0.7),
+    -6px -6px 20px rgba(81, 164, 162, 0.05),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(81, 164, 162, 0.12);
+}
+
+.neu-flat-hover:hover {
+  background: linear-gradient(145deg, #121b1b, #0d1414);
+  box-shadow: 
+    10px 10px 28px rgba(0, 0, 0, 0.8),
+    -7px -7px 22px rgba(81, 164, 162, 0.08),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.08);
+  border-color: rgba(81, 164, 162, 0.28);
+}
+
+.neu-inset {
+  background: #090e0e;
+  box-shadow: 
+    inset 5px 5px 12px rgba(0, 0, 0, 0.85),
+    inset -3px -3px 10px rgba(81, 164, 162, 0.04);
+  border: 1px solid rgba(81, 164, 162, 0.08);
+}
+
+.neu-inset-active {
+  background: #080d0d;
+  box-shadow: 
+    inset 4px 4px 10px rgba(0, 0, 0, 0.9),
+    inset -2px -2px 8px rgba(81, 164, 162, 0.08),
+    0 0 15px rgba(81, 164, 162, 0.15);
+  border: 1px solid rgba(81, 164, 162, 0.35);
+}
+
+.neu-pill-btn {
+  background: linear-gradient(145deg, #111a1a, #0d1313);
+  box-shadow: 
+    6px 6px 18px rgba(0, 0, 0, 0.65),
+    -4px -4px 14px rgba(81, 164, 162, 0.06),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(81, 164, 162, 0.18);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neu-pill-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 
+    8px 8px 22px rgba(0, 0, 0, 0.75),
+    -5px -5px 16px rgba(81, 164, 162, 0.12),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.12);
+  border-color: rgba(81, 164, 162, 0.4);
+}
+
+.neu-pill-btn:active {
+  transform: translateY(1px);
+  box-shadow: 
+    inset 3px 3px 8px rgba(0, 0, 0, 0.8),
+    inset -2px -2px 6px rgba(81, 164, 162, 0.05);
+}
+
+.neu-pill-primary {
+  background: linear-gradient(135deg, #51a4a2 0%, #3a7c7a 100%);
+  color: #070d0d;
+  box-shadow: 
+    6px 6px 20px rgba(0, 0, 0, 0.6),
+    -3px -3px 12px rgba(81, 164, 162, 0.2),
+    0 0 25px rgba(81, 164, 162, 0.35),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neu-pill-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 
+    8px 8px 24px rgba(0, 0, 0, 0.7),
+    -4px -4px 14px rgba(81, 164, 162, 0.3),
+    0 0 35px rgba(81, 164, 162, 0.5),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.6);
+  filter: brightness(1.05);
+}
+
+.neu-pill-primary:active {
+  transform: translateY(1px);
+  box-shadow: 
+    inset 2px 2px 6px rgba(0, 0, 0, 0.6),
+    0 0 15px rgba(81, 164, 162, 0.25);
+}
+
+.neu-circle {
+  border-radius: 9999px;
+  background: linear-gradient(145deg, #111a1a, #0c1212);
+  box-shadow: 
+    6px 6px 16px rgba(0, 0, 0, 0.65),
+    -4px -4px 12px rgba(81, 164, 162, 0.06),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(81, 164, 162, 0.15);
+}
+
+/* Pulsing radar effect */
+@keyframes radar-pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 0.4; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.animate-radar {
+  animation: radar-pulse 3s infinite ease-in-out;
+}
